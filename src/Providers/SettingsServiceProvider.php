@@ -1,6 +1,6 @@
 <?php
 
-namespace Larashim\Settings;
+namespace Larashim\Settings\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

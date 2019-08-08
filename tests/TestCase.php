@@ -38,7 +38,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Larashim\Settings\SettingsServiceProvider::class,
+            \Larashim\Settings\Providers\SettingsServiceProvider::class,
         ];
     }
 
