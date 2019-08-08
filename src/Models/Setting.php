@@ -31,15 +31,16 @@ class Setting extends Model
      *
      * @return self
      */
-    public static function make(string $name, $params = [])
+    public static function make(string $name, $params = [], $relates_to = null)
     {
         if (!is_string($params)) {
             $params = json_encode($params);
         }
 
         return self::create([
-            'name'    => $name,
-            'default' => $params,
+            'name'       => $name,
+            'relates_to' => $relates_to,
+            'default'    => $params,
         ]);
     }
 

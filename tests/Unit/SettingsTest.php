@@ -4,6 +4,7 @@ namespace Larashim\Settings\Tests\Unit;
 
 use Larashim\Settings\Tests\TestCase;
 use Larashim\Settings\Models\Setting;
+use Larashim\Settings\Tests\Models\Cat;
 use Larashim\Settings\Tests\Models\Person;
 
 class SettingsTest extends TestCase
@@ -15,11 +16,14 @@ class SettingsTest extends TestCase
             'notificationSound' => 'droplet.mp3'
         ]);
 
-        $person = Person::first();
-        $person->attachSetting('PREFERENCES');
+        Setting::make('FOODS', [
+            'poorfoods' => true,
+            'richfoods' => false
+        ]);
 
-        $person->setting('PREFERENCES')->set('backgroundColour', '#555555');
+        $person = Cat::first();
+        $person->attachSetting('FOODS');
 
-        dd($person->setting('PREFERENCES')->get());
+        dd($person->setting('FOODS')->get());
     }
 }

@@ -15,6 +15,8 @@ trait HasSettings
     public function settings()
     {
         return $this->morphToMany(Setting::class, 'settingable')
+                    ->whereNull('relates_to')
+                    ->orWhere('relates_to', get_called_class())
                     ->using(Settingable::class)
                     ->withPivot('value');
     }

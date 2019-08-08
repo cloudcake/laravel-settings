@@ -3,6 +3,7 @@
 namespace Larashim\Settings\Tests;
 
 use Illuminate\Support\Facades\Schema;
+use Larashim\Settings\Tests\Models\Cat;
 use Larashim\Settings\Tests\Models\Person;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
@@ -24,6 +25,13 @@ abstract class TestCase extends BaseTestCase
             $table->timestamps();
         });
 
+        Schema::create('cats', function ($table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->timestamps();
+        });
+
+        Cat::create(['name' => 'Furry Cat']);
         Person::create(['name' => 'John Doe']);
     }
 
