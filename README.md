@@ -45,7 +45,7 @@ Setting::make('preferences', [
 ```
 
 ## Attaching Settings
-When attaching settings, any fields not associated to the model will receive the default values associated to the global setting.
+When attaching settings, any fields not provided will receive the default values.
 ```php
 \App\User::find(1)->attachSetting('preferences', [
   'notifications' => false,
