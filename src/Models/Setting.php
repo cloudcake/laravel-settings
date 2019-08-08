@@ -84,6 +84,24 @@ class Setting extends Model
     }
 
     /**
+     * Remove empty fields.
+     *
+     * @param array $array
+     *
+     * @return array
+     */
+    private function removeEmpty(array $array)
+    {
+        array_walk_recursive($array, function (&$value, $key) use (&$array) {
+            if (empty($value)) {
+                unset($array[$key]);
+            }
+        });
+
+        return $array;
+    }
+
+    /**
      * Accessor for distant value;
      *
      * @return mixed
@@ -91,7 +109,7 @@ class Setting extends Model
     public function getValueAttribute()
     {
         $default = is_array($this->default) ? $this->default : json_decode($this->default, true);
-        $current = is_array($this->pivot->value) ? $this->pivot->value : json_decode($this->pivot->value, true);
+        $current = $this->removeEmpty(is_array($this->pivot->value) ? $this->pivot->value : json_decode($this->pivot->value, true));
 
         return array_merge($default, $current);
     }
