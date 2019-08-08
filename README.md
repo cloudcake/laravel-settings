@@ -52,3 +52,21 @@ When attaching settings, any fields not provided will receive the default values
 ]);
 ```
 The above will set `notifications` to `true` while `backgroundColour` will be inherited from the original setting. If the global setting is changed, the user's setting will return the changed setting.
+
+## Getting Settings
+
+#### Get All Fields
+```php
+\App\User::first()->setting('preferences');
+```
+
+#### Get Specific Field
+```php
+\App\User::first()->setting('preferences')->get('notifications');
+```
+
+## Modifying Settings
+```php
+\App\User::first()->setting('preferences')->set('notifications', true);
+```
+
