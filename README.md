@@ -24,9 +24,12 @@ class User extends Model
 ```php
 use Larashim\Settings\Models\Setting;
 
-Setting::make('preferences', [
-  'notifications'    => true,
-  'backgroundColour' => '#ffffff'
+Setting::make('config', [
+  'rateLimit' => true,
+  'ipLocks'   => [
+    '127.0.0.1',
+    '10.0.0.1'
+  ]
 ]);
 ```
 
@@ -42,10 +45,10 @@ Setting::make('preferences', [
 ```
 
 ## Attaching Settings
-
+When attaching settings, any fields not associated to the model will receive the default values associated to the global setting.
 ```php
-
 \App\User::find(1)->attachSetting('preferences', [
   'notifications' => false,
 ]);
 ```
+The above will set `notifications` to `true` while `backgroundColour` will be inherited from the original setting. If the global setting is changed, the user's setting will return the changed setting.
