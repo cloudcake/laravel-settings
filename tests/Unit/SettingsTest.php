@@ -9,7 +9,7 @@ use Larashim\Settings\Tests\Models\Person;
 
 class SettingsTest extends TestCase
 {
-    public function testPropertyCanBeCreated()
+    public function testSettings()
     {
         Setting::make('PREFERENCES', [
             'backgroundColour'  => '#ffffff',

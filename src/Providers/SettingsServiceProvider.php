@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 class SettingsServiceProvider extends ServiceProvider
 {
     /**
-     * Boot up Properties.
+     * Boot.
      *
      * @return void
      */
