@@ -17,7 +17,7 @@ class CreateSettingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('relates_to')->nullable();
-            $table->json('default');
+            $table->text('default');
             $table->timestamps();
 
             $table->index('name');
