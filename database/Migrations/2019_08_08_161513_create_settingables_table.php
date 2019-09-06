@@ -17,7 +17,7 @@ class CreateSettingablesTable extends Migration
             $table->bigInteger('setting_id');
             $table->bigInteger('settingable_id');
             $table->string('settingable_type');
-            $table->json('value')->nullable();
+            $table->text('value')->nullable();
         });
     }
 
