@@ -5,7 +5,10 @@
 # Usage
 
 ## Publish Migrations
-`php artisan vendor:publish --provider="Larashim\Settings\Providers\SettingsServiceProvider" --tag="migrations"`
+```php
+php artisan vendor:publish --provider="Larashim\Settings\Providers\SettingsServiceProvider" \
+                           --tag="migrations"`
+```
 
 ## Setup models with settings
 
