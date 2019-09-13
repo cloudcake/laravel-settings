@@ -7,7 +7,7 @@
 ## Publish Migrations
 ```php
 php artisan vendor:publish --provider="Larashim\Settings\Providers\SettingsServiceProvider" \
-                           --tag="migrations"`
+                           --tag="migrations"
 ```
 
 ## Setup models with settings
