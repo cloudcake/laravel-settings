@@ -4,6 +4,9 @@
 
 # Usage
 
+## Publish Migrations
+`php artisan vendor:publish --provider="Larashim\Settings\Providers\SettingsServiceProvider" --tag="migrations"`
+
 ## Setup models with settings
 
 Add the `\Larashim\Settings\Traits\HasSettings` trait to any model that should have settings.
