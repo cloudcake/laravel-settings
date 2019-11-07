@@ -12,9 +12,7 @@ class SettingsServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        $this->loadMigrationsFrom(__DIR__.'/../../database/Migrations');
-        
+    {        
         $this->publishes([
             __DIR__.'/../../database/Migrations' => database_path('migrations'),
         ], 'migrations');
