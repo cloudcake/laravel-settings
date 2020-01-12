@@ -1,11 +1,11 @@
 <?php
 
-namespace Larashim\Settings\Tests\Unit;
+namespace Settings\Tests\Unit;
 
-use Larashim\Settings\Tests\TestCase;
-use Larashim\Settings\Models\Setting;
-use Larashim\Settings\Tests\Models\Cat;
-use Larashim\Settings\Tests\Models\Person;
+use Settings\Tests\TestCase;
+use Settings\Models\Setting;
+use Settings\Tests\Models\Cat;
+use Settings\Tests\Models\Person;
 
 class SettingsTest extends TestCase
 {

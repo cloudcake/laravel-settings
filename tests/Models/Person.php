@@ -1,9 +1,9 @@
 <?php
 
-namespace Larashim\Settings\Tests\Models;
+namespace Settings\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Larashim\Settings\Traits\HasSettings;
+use Settings\Traits\HasSettings;
 
 class Person extends Model
 {

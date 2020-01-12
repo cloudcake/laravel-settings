@@ -1,6 +1,6 @@
 <?php
 
-namespace Larashim\Settings\Models;
+namespace Settings\Models;
 
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;

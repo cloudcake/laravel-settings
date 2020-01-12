@@ -1,9 +1,9 @@
 <?php
 
-namespace Larashim\Settings\Traits;
+namespace Settings\Traits;
 
-use Larashim\Settings\Models\Setting;
-use Larashim\Settings\Models\Settingable;
+use Settings\Models\Setting;
+use Settings\Models\Settingable;
 
 trait HasSettings
 {
@@ -28,7 +28,7 @@ trait HasSettings
      * @param mixed $setting
      * @param mixed $value
      *
-     * @return \Larashim\Settings\Models\Setting
+     * @return \Settings\Models\Setting
      */
     public function attachSetting($setting, $value = [])
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Larashim\Settings\Tests;
+namespace Settings\Tests;
 
 use Illuminate\Support\Facades\Schema;
-use Larashim\Settings\Tests\Models\Cat;
-use Larashim\Settings\Tests\Models\Person;
+use Settings\Tests\Models\Cat;
+use Settings\Tests\Models\Person;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
@@ -38,7 +38,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Larashim\Settings\Providers\SettingsServiceProvider::class,
+            \Settings\Providers\SettingsServiceProvider::class,
         ];
     }
 

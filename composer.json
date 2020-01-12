@@ -1,5 +1,5 @@
 {
-  "name": "larashim/settings",
+  "name": "cloudcake/settings",
   "description": "Associate generic data to any other model without polluting your application model logic.",
   "type": "library",
   "license": "MIT",
@@ -14,18 +14,18 @@
   },
   "autoload": {
     "psr-4": {
-      "Larashim\\Settings\\": "src/"
+      "Settings\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Larashim\\Settings\\Tests\\": "tests/"
+      "Settings\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Larashim\\Settings\\Providers\\SettingsServiceProvider"
+        "Settings\\Providers\\SettingsServiceProvider"
       ]
     }
   }

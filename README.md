@@ -6,16 +6,16 @@
 
 ## Publish Migrations
 ```php
-php artisan vendor:publish --provider="Larashim\Settings\Providers\SettingsServiceProvider" \
+php artisan vendor:publish --provider="Settings\Providers\SettingsServiceProvider" \
                            --tag="migrations"
 ```
 
 ## Setup models with settings
 
-Add the `\Larashim\Settings\Traits\HasSettings` trait to any model that should have settings.
+Add the `\Settings\Traits\HasSettings` trait to any model that should have settings.
 
 ```php
-use Larashim\Settings\Traits\HasSettings;
+use Settings\Traits\HasSettings;
 
 class User extends Model
 {
@@ -28,7 +28,7 @@ class User extends Model
 #### Global Settings
 
 ```php
-use Larashim\Settings\Models\Setting;
+use Settings\Models\Setting;
 
 Setting::make('config', [
   'rateLimit' => true,
@@ -42,7 +42,7 @@ Setting::make('config', [
 #### Model Specific Settings
 
 ```php
-use Larashim\Settings\Models\Setting;
+use Settings\Models\Setting;
 
 Setting::make('preferences', [
   'notifications'    => true,
