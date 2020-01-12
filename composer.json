@@ -1,5 +1,5 @@
 {
-  "name": "cloudcake/settings",
+  "name": "cloudcake/laravel-settings",
   "description": "Associate generic data to any other model without polluting your application model logic.",
   "type": "library",
   "license": "MIT",
